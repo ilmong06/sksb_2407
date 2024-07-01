@@ -1,4 +1,8 @@
 # Package Managers
 package-lock.json
 pnpm-lock.yaml
+<<<<<<< HEAD
 yarn.lock
+=======
+yarn.lock
+>>>>>>> 8078078 (install frontapp)

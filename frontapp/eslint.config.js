@@ -20,4 +20,8 @@ export default [
 	{
 		ignores: ['build/', '.svelte-kit/', 'dist/']
 	}
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> 8078078 (install frontapp)
