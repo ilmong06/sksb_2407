@@ -2,7 +2,11 @@
 	import '../app.css';
 </script>
 
+<<<<<<< HEAD
 <div>레이아웃</div>
 <a href="/articles">게시글 목록</a>
 <a href="/text">테스트</a>
+=======
+<div class="text-orange-600">레이아웃</div>
+>>>>>>> 7f0976d (tailwind)
 <slot />
