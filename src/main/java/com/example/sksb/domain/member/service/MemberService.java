@@ -8,6 +8,7 @@ import com.example.sksb.global.security.SecurityUser;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -79,6 +80,13 @@ public class MemberService {
         Map<String, Object> payloadBody = authTokenService.getDataFrom(accessToken);
     long id =(int) payloadBody.get("id");
     String username = (String) payloadBody.get("username");
-    List<String> authorities =(List<String>git remote -v) payloadBody.get("username");
+    List<String> authorities =(List<String>) payloadBody.get("username");
+
+    return new SecurityUser(
+            id,
+            username,
+            "",
+            authorities.stream().map(SimpleGrantedAuthority::new).toList()
+    );
     }
 }
